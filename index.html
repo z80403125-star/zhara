@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Интерактивная викторина о заработной плате: 20 вопросов, мгновенная проверка и результат в баллах.">
+  <title>Зарплата без секретов — викторина</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Зарплата без секретов — на главную">
+        <span class="brand-mark" aria-hidden="true">₽</span>
+        <span>финансы <strong>понятно</strong></span>
+      </a>
+      <span class="topbar-note"><span class="live-dot" aria-hidden="true"></span> Проверь свои знания</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Короткий тест · 20 вопросов</p>
+          <h1 id="page-title">Зарплата<br><span>без секретов.</span></h1>
+          <p class="intro-text">Разберись в начислениях, выплатах и терминах — и узнай, насколько хорошо ты ориентируешься в теме.</p>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="art-glow"></div>
+          <div class="receipt">
+            <div class="receipt-top"><span>РАСЧЁТНЫЙ ЛИСТ</span><span class="receipt-dots">•••</span></div>
+            <div class="receipt-label">К выплате</div>
+            <div class="receipt-amount">₽ 84 500</div>
+            <div class="receipt-rule"></div>
+            <div class="receipt-row"><span>Оклад</span><b>+ 100 000</b></div>
+            <div class="receipt-row"><span>Налог</span><b class="muted">− 13 000</b></div>
+            <div class="receipt-stamp">ВСЁ ЯСНО <span>✓</span></div>
+          </div>
+          <span class="art-sparkle sparkle-one">✳</span>
+          <span class="art-sparkle sparkle-two">✦</span>
+        </div>
+      </section>
+
+      <section class="quiz-card" aria-labelledby="question-title">
+        <div class="quiz-topline">
+          <div class="question-counter"><span id="current-number">01</span><span class="counter-divider">/</span><span id="total-number">20</span></div>
+          <div class="score-chip"><span class="score-icon" aria-hidden="true">✦</span> Баллы <strong id="score-count">0</strong></div>
+        </div>
+
+        <div class="progress-track" role="progressbar" aria-label="Прогресс викторины" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0">
+          <div class="progress-fill"></div>
+        </div>
+
+        <div class="question-area">
+          <p class="question-kicker" id="question-kicker">ВОПРОС 01</p>
+          <h2 id="question-title">Загрузка вопроса…</h2>
+          <div class="answers" id="answer-list" aria-label="Варианты ответа"></div>
+          <div class="feedback" id="feedback" role="status" aria-live="polite" hidden>
+            <span class="feedback-icon" aria-hidden="true"></span>
+            <div>
+              <strong class="feedback-title"></strong>
+              <p class="feedback-detail"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-footer">
+          <span class="footer-hint" id="footer-hint"><span class="hint-dot"></span> Выбери один вариант ответа</span>
+          <button class="button button-primary" id="next-button" type="button" disabled>
+            <span>Следующий вопрос</span><span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="result-card" id="result-card" aria-labelledby="result-title" hidden>
+        <div class="result-symbol" aria-hidden="true">✦</div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> Викторина завершена</p>
+        <h2 id="result-title">Отличная работа!</h2>
+        <p class="result-caption">Вот как ты справился с темой заработной платы</p>
+        <div class="result-score">
+          <span class="result-points"><strong id="final-score">0</strong><span> / 20 баллов</span></span>
+          <span class="result-percent" id="final-percent">0%</span>
+        </div>
+        <div class="result-meter" aria-hidden="true"><div class="result-meter-fill"></div></div>
+        <div class="result-stats">
+          <div class="stat-item"><span class="stat-indicator correct-indicator"></span><span>Правильных</span><strong id="correct-count">0</strong></div>
+          <div class="stat-item"><span class="stat-indicator wrong-indicator"></span><span>Неправильных</span><strong id="wrong-count">0</strong></div>
+        </div>
+        <button class="button button-primary restart-button" id="restart-button" type="button">
+          <span>Пройти заново</span><span class="button-arrow" aria-hidden="true">↻</span>
+        </button>
+      </section>
+
+      <footer class="page-footer">
+        <span>20 вопросов, чтобы разобраться в своей зарплате</span>
+        <span class="footer-decoration" aria-hidden="true">✳ &nbsp;₽&nbsp; ✳</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
